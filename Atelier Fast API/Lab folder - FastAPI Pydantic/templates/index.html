@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Iris Predictor</title>
+
+</head>
+
+<body>
+ <div>
+    <h1>Iris Predictor</h1>
+  
+  
+    <form action="{{ url_for('predict') }}" method="post">
+      <input type="text" value="{{ data.feature1 if data }}" name="feature1" placeholder="sepal length" required="required" />
+      <input type="text" value="{{ data.feature2 if data }}" name="feature2" placeholder="sepal width" required="required" />
+      <button type="submit" class="btn">Predict</button>
+    </form>
+
+
+    
+   <br>
+   <br>
+   <b>{{ prediction_text }}</b>
+
+ </div>
+
+
+</body>
+</html>
